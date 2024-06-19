@@ -1,0 +1,246 @@
+<html>
+  <head>
+    <title>Weather-test</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./imgs/earth.png" />
+  </head>
+  <body>
+    <!-- navbar  -->
+    <nav>
+      <nav class="navbar navbar-expand-lg bg-dark p-5">
+        <div class="container">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <div class="d-flex justify-content-start align-items-center">
+                <img
+                  src="./imgs/logo@2x.png"
+                  alt="Logo"
+                  width="64"
+                  height="38"
+                  class="d-inline-block align-text-top me-3"
+                />
+                <div>
+                  <h5 class="mb-0 mt-3 text-white">Weather</h5>
+                  <p style="font-size: x-small" class="text-white">
+                    tagline goes here
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Cameras</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Photos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#footer">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </nav>
+    <!-- search input  -->
+    <div
+      class="container d-flex justify-content-center align-items-center mt-5"
+    >
+      <form class="w-100 p-3 position-relative">
+        <input
+          type="text"
+          id="searchinput"
+          placeholder="Find Your Location..."
+          class="border rounded-5 form-control text-white-50 p-3"
+        />
+        <input
+          type="button"
+          value="Find"
+          id="searchbutton"
+          class="pinnedButton btn btn-outline-info text-white rounded-pill px-5"
+        />
+      </form>
+    </div>
+    <!-- cards -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div>
+            <div
+              class="card border-2 border-info"
+              style="background-color: #323544; color: white"
+            >
+              <div class="card-body">
+                <div
+                  style="background-color: #62677d; color: white"
+                  class="d-flex justify-content-between border border-2 border-info-subtle py-3"
+                >
+                  <h6 class="ms-2" id="dayName">Day</h6>
+                  <h6 class="me-2" id="date"> Date</h6>
+                </div>
+                <p class="card-text mt-3" id="city">Country</p>
+               
+                 <div class="d-flex justify-content-center align-items-center"> <img src="" alt="" id="imgtoday" ></div>
+                  <h1 class="card-text text-center py-3" id="temp">30.2° C</h1>
+                
+             
+                <p class="text-info" id="statustext">status</p>
+                <div class="d-flex justify-content-around align-items-center">
+                  <i class="fa-solid fa-md fa-umbrella" style="color: #b197fc" id="humidty">
+                    20%</i
+                  >
+                  <i class="fa-solid fa-md fa-wind" style="color: #b197fc" id="wind">
+                    18 km/hr</i
+                  >
+                  <i class="fa-solid fa-md fa-globe" style="color: #b197fc" id="direction">
+                    East</i
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="col-md-4">
+          <div>
+            <div
+              class="card border-2 border-info"
+              style="background-color: #323544; color: white"
+            >
+              <div class="card-body">
+                <div
+                  style="background-color: #62677d; color: white"
+                  class="d-flex justify-content-between border border-2 border-info-subtle py-3"
+                >
+                  <h6 class="text-center ms-2" id="tomorrowid">Tomorrow</h6>
+                </div>
+                <div
+                  class="d-flex justify-content-around align-items-center flex-column py-3"
+                >
+                  <img src="" alt="" id="imgtom">
+                  <h3 class="card-text mt-2 text-center h2 py-3" id="maxtemp">40.4° C</h3>
+                  <p class="card-text text-center" id="mintemp">28.2° C</p>
+
+                  <p class="text-info" id="tomstatus">sunny</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="col-md-4">
+          <div>
+            <div
+              class="card border-2 border-info"
+              style="background-color: #323544; color: white"
+            >
+              <div class="card-body">
+                <div
+                  style="background-color: #62677d; color: white"
+                  class="d-flex justify-content-between border border-2 border-info-subtle py-3"
+                >
+                  <h6 class="text-center ms-2" id="thedayafter">The Day After</h6>
+                </div>
+                <div
+                  class="d-flex justify-content-around align-items-center flex-column py-3"
+                >
+                  <img src="" alt="" id="imgthedayafter">
+                  <h3 class="card-text mt-2 text-center h2 py-3" id="maxTemperature">max</h3>
+                  <p class="card-text text-center" id="minTemperature">min</p>
+
+                  <p class="text-info" id="s">status</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer mt-5" id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <form class="w-100 p-3 position-relative">
+              <input
+                type="text"
+                placeholder="Write Your Message..."
+                class="border rounded-5 form-control text-white-50 p-3"
+              />
+              <input
+                type="button"
+                value="Submit"
+                id="submit"
+                class="pinnedButton btn btn-outline-info text-white rounded-pill px-5"
+              />
+            </form>
+
+            <p class="text-white-50 ms-4">
+              Copyright 2014 Company name. Designed by Themezy. All rights
+              reserved
+            </p>
+          </div>
+
+          <div class="col-md-6">
+            <ul class="text-center mt-5">
+              <li>
+                <a href="https://www.facebook.com" class="facebook text-info"
+                  ><i class="fa-brands fa-facebook-square fa-2x"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.twitter.com" class="twitter text-info"
+                  ><i class="fa-brands fa-twitter-square fa-2x"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.pinterest.com" class="pinterest text-info"
+                  ><i class="fa-brands fa-pinterest fa-2x"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com" class="instagram text-info"
+                  ><i class="fa-brands fa-instagram-square fa-2x"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/main.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
